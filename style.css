@@ -17,6 +17,15 @@ body{
     background-color: #101010;
     box-shadow: 0px 0px 100px black;
 }
+div.footer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    position: absolute;
+    bottom: 0px;
+}
 .listitems{
     margin: 0;
     padding: 50px;

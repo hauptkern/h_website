@@ -3,9 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="images/favicon.png" type="image/png">
         <link rel="stylesheet" href="style.css">
         <title>Hauptkern</title>
+        <script language="javascript" type="text/javascript">
+            function langSelect(option){
+                if(option=="de"){
+                    document.getElementById("home_redirect").innerHTML="Startseite";
+                    document.getElementById("contact_redirect").innerHTML="Nachricht<br>Senden";
+                    }
+                else if(option=="us"){
+                    document.getElementById("home_redirect").innerHTML="Home Page";
+                    document.getElementById("contact_redirect").innerHTML="Contact";
+                }
+                else if(option=="tr"){
+                    document.getElementById("home_redirect").innerHTML="Ana Sayfa";
+                    document.getElementById("contact_redirect").innerHTML="İletişim";
+                }
+                else if(option=="ru"){
+                    document.getElementById("home_redirect").innerHTML="домашняя <br>страница";
+                    document.getElementById("contact_redirect").innerHTML="контакт";
+                }
+            }
+        </script>
     </head>
     <body>
         <img class="background" alt="background" src="images/background.jpg">
@@ -14,10 +34,18 @@
                 <img src="images/logo.png" alt="logo">
             </div>
             <ul class="listitems">
-                <li><a href="#">Home Page</a></li>
-                <li><a href="https://github.com/hauptkern" target="_blank">Github</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a id="home_redirect" href="#">Home Page</a></li>
+                <li><a id="portfolio_redirect" href="https://github.com/hauptkern" target="_blank">Github</a></li>
+                <li><a id="contact_redirect" href="#">Contact</a></li>
             </ul>
+            <div class="footer">
+                <div class="footer-content">
+                    <img src="images/de_flag.png" width="16" height="16" onclick="langSelect('de')">
+                    <img src="images/us_flag.png" width="16" height="16" onclick="langSelect('us')">
+                    <img src="images/tr_flag.png" width="16" height="16" onclick="langSelect('tr')">
+                    <img src="images/ru_flag.png" width="16" height="16" onclick="langSelect('ru')">
+                </div>
+            </div>
         </div>
     </body>
 </html>
